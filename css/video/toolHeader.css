@@ -1,0 +1,76 @@
+/*导航开始*/
+.toolNav {
+	margin:0 auto;
+	width:1030px;
+	height:108px;
+	/* width  : 924px;
+	height : 114px; */
+}
+.toolNav a{
+	float:left;
+	margin-right:17px;
+	margin-top:42px;
+	width:245px;
+	height:66px;
+	font-size: 18px;
+	line-height:66px;
+	color: #fff;
+	border-radius: 4px;
+	background: #2B2D37;
+	letter-spacing: 2.4px;
+	cursor:pointer;
+	/*
+	margin-right:13px;
+	 */
+}
+.toolNav a:last-of-type{
+	margin-right:0;
+}
+.toolNav a.toolBeauty{
+	margin-right:16px;
+}
+.toolNav a.toolCompress:hover{
+	background-image: linear-gradient(-136deg, #A3D7DD 0%, #B0A2DB 100%);
+	color:#fff;
+	text-decoration:none;
+}
+.toolNav a.toolVideo{
+	background-image:linear-gradient(-140deg, #FBD533 0%, #A2D85E 100%);
+	color:#fff;
+	text-decoration:none;
+}
+.toolNav a.toolCut:hover{
+	background-image: linear-gradient(-135deg, #E86874 0%, #E58A4D 100%);
+	color:#fff;
+	text-decoration:none;
+}
+.toolNav a.toolBeauty:hover{
+	background-image: linear-gradient(-135deg, #86CD6D 0%, #60C4AF 100%);
+	color:#fff;
+	text-decoration:none;
+}
+.toolNav a i{
+	float:left;
+	width:100px;
+	height:100%;
+}
+.toolNav a.toolCompress i{  /*/tailor/html/tool*/
+	width:115px;
+	background:url(/tailor/images/video/compress.png) no-repeat 56px  center;
+	background-size:27px 32px;
+}
+.toolNav a.toolVideo i{
+	width:105px;
+	background:url(/tailor/images/video/video.png) no-repeat 44px center;
+	background-size:37px 37px;
+}
+.toolNav a.toolCut i{
+	width:110px;
+	background:url(/tailor/images/video/cut.png) no-repeat 51px center;
+	background-size:32px 32px;
+}
+.toolNav a.toolBeauty i{
+	width:108px;
+	background:url(/tailor/images/video/beauty.png) no-repeat 56px center;
+	background-size:36px 36px;
+}

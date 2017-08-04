@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<!-- <meta name="renderer" content="webkit">  -->
+		<title>GIF视频裁剪工具_GIF压缩工具_GIF制作工具_GIF裁剪工具_GIF水印工具_SOOGIF</title>
+	    <meta name="description" content="SOOGIF，GIF动图中文搜索引擎，最好的GIF动图素材和GIF在线制作工具，提供丰富的 GIF素材，动图素材，动态图片下载，表情包下载，斗图必备表情包，微信公众号、微博编辑必备 GIF素材" />
+		<meta name="keywords" content="GIF动图压缩工具,GIF动图制作工具,GIF动图水印工具,GIF动图裁剪工具,GIF格式转换工具" />
+		<link rel="stylesheet" href="/tailor/css/video/public.css" />
+		<link rel="stylesheet" href="/tailor/css/video/toolHeader.css" />
+		<link rel="stylesheet" href="/tailor/css/video/test.css" />
+		<link rel="stylesheet" href="/tailor/css/video/video_back.css"/>
+		<script>
+			window.onbeforeunload = function(event){
+				/*event = event || window.event;
+				return event.returnValue = "即将离开页面，是否确认编辑的内容已保存或者复制使用，否则内容可能丢失"; */
+			}
+		</script>
+		<script>
+			// 友盟
+			// ydlx
+			// 2016-10-13
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan  style='display:none' id='cnzz_stat_icon_1260067336'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260067336' type='text/javascript'%3E%3C/script%3E"));
+			
+			// 百度统计
+			// ydlx
+			// 2016-9-28
+			var _hmt = _hmt || [];
+			(function() {
+		  		var hm = document.createElement("script");
+		  		hm.src = "//hm.baidu.com/hm.js?37c68c083c2c85fe183a5e0224eb35a9";
+		  		var s = document.getElementsByTagName("script")[0]; 
+		  		s.parentNode.insertBefore(hm, s);
+			})();
+			//声明_czc对象:
+			var _czc = _czc || [];
+			//绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+			_czc.push(["_setAccount", "1260067336"]);
+			 
+			// growing io
+			// ydlx
+			// 2016-8-9
+		    var _vds = _vds || [];
+		    window._vds = _vds;
+		      (function(){
+		        _vds.push(['setAccountId', 'beb66a1ac816845f']);
+		        (function() {
+		          var vds = document.createElement('script');
+		          vds.type='text/javascript';
+		          vds.async = true;
+		          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+		          var s = document.getElementsByTagName('script')[0];
+		          s.parentNode.insertBefore(vds, s);
+		      })();
+		    })();
+		</script>
+	</head>
+	<body>
+		<!-- <div class="padding70"></div> -->
+		<!--导航 开始 -->
+	    <div class="toolNav">
+			<a href="/compress" class="toolCompress"><i></i>GIF压缩</a>
+			<a href="/crop" class="toolCut"><i></i>GIF裁剪</a>
+			<a href="/editor" class="toolBeauty"><i></i>GIF编辑</a>
+			<a href="/video" class="toolVideo"><i></i>视频转GIF</a>
+	    </div>
+		<!--导航 结束-->
+		<div id="main">
+			<!--输入地址栏 开始-->
+			<div id="tailorCreate" class="create">
+				<div class="inputContainer">
+					<input type="text" id="videoUrl" placeholder="粘贴视频网址，例如，优酷，土豆，腾讯视频，点击开始制作。" autofocus="true"/>
+					<p class="errorTip">
+						<span>识别不出该网址</span>
+						<!--<a href="#">查看支持网址</a>-->
+					</p>
+				</div>
+				<button id="create"></button>
+			</div>
+			<!--输入地址栏 结束-->
+			<!--帮助 开始-->
+			<div id="help">
+				<span class="help1"></span>
+				<span class="help2"></span>
+				<span class="help3"></span>
+			</div>
+			<!--帮助 结束-->
+			<!--视频播放区域 开始-->
+			<div id="workContent" class="clear">
+				<div id="shade"></div>
+				<div class="video clear">
+					
+					<div id="jp_container_1" class="jp-video jp-video-360p" role="application" aria-label="media player">
+						<div class="jp-type-single">
+						</div>
+						<span class="video-currentTime">00:00</span>
+						<span class="video-duration"></span>
+					</div>
+					<div class="progress">
+						<div class="dragContainer clear" id="dragContainer">
+							<div class="dragTop" id="dragTop">
+							</div>
+							<p class="beginTime">
+								<span>开始</span>
+								<span id="duration">0:00:00</span>
+							</p>
+							<div class="dragDurationContainer" id="dragDurationContainer">
+								<p class="dragDuration">
+									<span id="progressDurationRuning"></span>
+									<span id="progressDurationLength"></span>
+									<span class="continueTime">持续&nbsp;<b>10s</b></span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="workCreate" id="workCreate">
+					<span class="" id="produce">生成gif</span>
+				</div>
+			</div>
+			<!--视频播放区域 结束-->
+			<!--生成图片区域 开始-->
+			<div class="gifContainer clear">
+				<div class="gifShow clear">
+					<ul class="clear" id="photos">
+						<li class="next">
+							<div class="producedImg">
+								<div class="addDelete"></div>
+							</div>
+							<div class="downwrap">
+								<a class="download" href="#" download>下载</a>
+							</div>
+						</li>
+						<li>
+							<div class="producedImg">
+								<span class="addDelete"></span>
+							</div>
+							<div class="downwrap">
+								<a class="download" href="#" download>下载</a>
+							</div>
+						</li>
+						<li>
+							<div class="producedImg">
+								<span class="addDelete"></span>
+							</div>
+							<div class="downwrap">
+								<a class="download" href="#" download>下载</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--生成图片区域 结束-->
+		</div>
+		<div class="downloadAllWrap">
+			<span class="downloadAll">打包下载</span>
+		</div>
+		<div id="preview">
+			<img/>
+		</div>
+		<script type="text/javascript" src="/tailor/js/video/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="/tailor/js/video/jquery.jplayer.js"></script>
+		<!--<script type="text/javascript" src="/tailor/js/video/saveUrls.js"></script>-->
+		<!-- <script type="text/javascript" src="/tailor/js/video/background.js"></script> -->
+		<script type="text/javascript" src="/tailor/js/video/test.js"></script>
+	</body>
+</html>
